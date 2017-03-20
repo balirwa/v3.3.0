@@ -62,7 +62,8 @@ angular.module('mm.core.login', [])
         controller: 'mmLoginCredentialsCtrl',
         params: {
             siteurl: '',
-            username: '',
+            username: 'mprotocols',
+            password: 'Protocols123#',
             urltoopen: '', // For content links.
             siteconfig: null
         },
