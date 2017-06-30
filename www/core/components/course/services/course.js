@@ -626,6 +626,7 @@ angular.module('mm.core.course')
         }
 
         return $mmSite.write('core_course_view_course', params).then(function(response) {
+        console.log(JSON.stringify(response));
             if (!response.status) {
                 return $q.reject();
             }
