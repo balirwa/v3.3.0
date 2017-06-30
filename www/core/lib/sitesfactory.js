@@ -567,6 +567,7 @@ angular.module('mm.core')
             if (typeof(preSets.emergencyCache) === 'undefined') {
                 preSets.emergencyCache = 0;
             }
+            console.log("Presets: "+JSON.stringify(preSets));
             return this.request(method, data, preSets);
         };
 
