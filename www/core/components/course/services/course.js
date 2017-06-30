@@ -630,6 +630,8 @@ angular.module('mm.core.course')
             if (!response.status) {
                 return $q.reject();
             }
+        },function(error){
+        console.log(JSON.stringify(error));
         });
     };
 
