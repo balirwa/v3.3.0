@@ -766,8 +766,6 @@
     "mma.files.sitefiles": "Site files",
     "mma.files.sitefilesdesc": "The other files that are available to you on this Moodle site.",
     "mma.files.uploadfiles": "Upload files",
-    "mma.frontpage.sitehome": "Site home",
-    "mma.frontpage.sitenews": "Site announcements",
     "mma.messageoutput_airnotifier.processorsettingsdesc": "Configure devices",
     "mma.messages.addcontact": "Add contact",
     "mma.messages.blockcontact": "Block contact",

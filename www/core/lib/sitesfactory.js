@@ -562,7 +562,7 @@ angular.module('mm.core')
                 preSets.saveToCache = 0;
             }
             if (typeof(preSets.sync) === 'undefined') {
-                preSets.sync = 0;
+                preSets.sync = 1;
             }
             if (typeof(preSets.emergencyCache) === 'undefined') {
                 preSets.emergencyCache = 0;
