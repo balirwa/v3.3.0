@@ -20,7 +20,7 @@ angular.module('mm.core')
  * @ngdoc service
  * @name $mmWsRequestSync
  */
-.factory('$mmWsRequestSync', function($q, $log, $mmSitesFactory, $mmSitesManager, $mmSite, $mmSync, $mmWsRequestOffline) {
+.factory('$mmWsRequestSync', function($q, $log, $mmSitesFactory, $mmSitesManager, $mmSite, $mmSync, $mmWsRequestOffline, $mmApp) {
     var self = $mmSync.createChild('mm.core', 300000);
     $log = $log.getInstance('$mmWsRequestSync');
 
