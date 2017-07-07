@@ -21,7 +21,7 @@ angular.module('mm.core')
  * @name $mmWsRequestSync
  */
 .factory('$mmWsRequestSync', function($q, $log, $mmSitesFactory, $mmSitesManager, $mmSite, $mmSync, $mmWsRequestOffline) {
-    var self = $mmSync.createChild(mmaModWikiComponent, mmaModWikiSyncTime);
+    var self = $mmSync.createChild('mm.core', 300000);
     $log = $log.getInstance('$mmWsRequestSync');
 
     self.syncRequest = function(request){
