@@ -185,7 +185,7 @@ angular.module('mm.core', ['pascalprecht.translate'])
 })
 
 .run(function($ionicPlatform, $ionicBody, $window, $mmEvents, $mmInitDelegate, mmCoreEventKeyboardShow, mmCoreEventKeyboardHide,
-        $mmApp, $timeout, mmCoreEventOnline, mmCoreEventOnlineStatusChanged, $mmUtil, $ionicScrollDelegate) {
+        $mmApp, $timeout, mmCoreEventOnline, mmCoreEventOnlineStatusChanged, $mmUtil, $ionicScrollDelegate,$mmCronDelegate) {
     // Execute all the init processes.
     $mmInitDelegate.executeInitProcesses();
 
@@ -272,4 +272,6 @@ angular.module('mm.core', ['pascalprecht.translate'])
             $mmEvents.trigger(mmCoreEventOnlineStatusChanged, online);
         }, 1000);
     }
+
+    $mmCronDelegate.register('mm.core', '$mmWsRequestSync.syncHandler');
 });

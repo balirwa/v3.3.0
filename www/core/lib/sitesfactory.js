@@ -610,6 +610,11 @@ angular.module('mm.core')
             var site = this,
                 initialToken = site.token;
             data = data || {};
+            //save request if offline
+            if (!$mmApp.isOnline() && !retrying && preSets.sync == 1) {
+                $log.debug('Cannot send request because device is offline. Storing request.');
+                return $mmWsRequestOffline.saveRequest(this.id,method, data, preSets);
+            }
 
             // Get the method to use based on the available ones.
             method = site.getCompatibleFunction(method);
