@@ -612,8 +612,11 @@ angular.module('mm.core')
             data = data || {};
             //save request if offline
             if (!$mmApp.isOnline() && !retrying && preSets.sync == 1) {
+                console.log("App offline. Queuing request: "+method);
                 $log.debug('Cannot send request because device is offline. Storing request.');
                 return $mmWsRequestOffline.saveRequest(this.id,method, data, preSets);
+            } else {
+                console.log("App online. Not queuing request");
             }
 
             // Get the method to use based on the available ones.
