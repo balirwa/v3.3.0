@@ -197,7 +197,7 @@ angular.module('mm.core')
             mmCoreWSPrefix, mmCoreSessionExpired, $mmEvents, mmCoreEventSessionExpired, mmCoreUserDeleted, mmCoreEventUserDeleted,
             $mmText, $translate, mmCoreConfigConstants, mmCoreUserPasswordChangeForced, mmCoreEventPasswordChangeForced,
             mmCoreLoginTokenChangePassword, mmCoreSecondsMinute, mmCoreUserNotFullySetup, mmCoreEventUserNotFullySetup,
-            mmCoreSitePolicyNotAgreed, mmCoreEventSitePolicyNotAgreed, mmCoreUnicodeNotSupported) {
+            mmCoreSitePolicyNotAgreed, mmCoreEventSitePolicyNotAgreed, mmCoreUnicodeNotSupported, $mmWsRequestOffline) {
 
         $log = $log.getInstance('$mmSite');
 
