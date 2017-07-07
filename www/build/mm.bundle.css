@@ -12194,19 +12194,6 @@ p.mma-mod-assign-warning {
   margin: 0;
   width: auto; }
 
-.mm-site_mod_choice .chart {
-  max-width: 400px;
-  margin: 0 auto; }
-
-@media (min-width: 767px) {
-  .mm-site_mod_choice .col {
-    border-left: 1px solid #ddd; }
-    .mm-site_mod_choice .col.item, .mm-site_mod_choice .mm-grades-table .col.itemcenter, .mm-grades-table .mm-site_mod_choice .col.itemcenter, .mm-site_mod_choice .col .chart-item {
-      margin-top: 0;
-      border-top: 0; }
-    .mm-site_mod_choice .col:first-child {
-      border-left: 0; } }
-
 .mma-chat-notice {
   text-align: center;
   margin-top: 10px; }
@@ -12235,6 +12222,19 @@ p.mma-mod-assign-warning {
   padding-bottom: 0; }
   .mma-mod_chat-users-modal .item-complex .item-avatar .tabs, .mma-mod_chat-users-modal .item-complex .item-media .tabs, .mma-mod_chat-users-modal .item-complex .item-avatar-center .tabs {
     border: 0; }
+
+.mm-site_mod_choice .chart {
+  max-width: 400px;
+  margin: 0 auto; }
+
+@media (min-width: 767px) {
+  .mm-site_mod_choice .col {
+    border-left: 1px solid #ddd; }
+    .mm-site_mod_choice .col.item, .mm-site_mod_choice .mm-grades-table .col.itemcenter, .mm-grades-table .mm-site_mod_choice .col.itemcenter, .mm-site_mod_choice .col .chart-item {
+      margin-top: 0;
+      border-top: 0; }
+    .mm-site_mod_choice .col:first-child {
+      border-left: 0; } }
 
 .mma-forum-discussion-link {
   text-decoration: none; }
