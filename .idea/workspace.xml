@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98010321-7635-4e02-a0da-536f1f7c6ed2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/addons/mod/wiki/templates/index.html" afterPath="$PROJECT_DIR$/www/addons/mod/wiki/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/build/mm.bundle.css" afterPath="$PROJECT_DIR$/www/build/mm.bundle.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/build/mm.bundle.js" afterPath="$PROJECT_DIR$/www/build/mm.bundle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/build/mm.bundle.min.css" afterPath="$PROJECT_DIR$/www/build/mm.bundle.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/build/mm.bundle.scss" afterPath="$PROJECT_DIR$/www/build/mm.bundle.scss" />
-    </list>
+    <list default="true" id="98010321-7635-4e02-a0da-536f1f7c6ed2" name="Default" comment="" />
     <ignored path="mProtocols.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -503,7 +496,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="29" y="23" width="1195" height="728" extended-state="1" />
+    <frame x="29" y="23" width="1195" height="728" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
