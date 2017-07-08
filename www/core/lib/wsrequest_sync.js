@@ -25,9 +25,8 @@ angular.module('mm.core')
     $log = $log.getInstance('$mmWsRequestSync');
 
     self.syncRequest = function(request){
-        var retrying = true;
         console.log("Syncing request: "+JSON.stringify(request));
-        return $mmSite.request(request.method, request.data, request.preSets, retrying);
+        return $mmSite.write(request.method, request.data, request.preSets);
     }
 
     self.syncRequests = function(){
