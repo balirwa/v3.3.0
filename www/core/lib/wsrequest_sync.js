@@ -20,55 +20,49 @@ angular.module('mm.core')
  * @ngdoc service
  * @name $mmWsRequestSync
  */
-.factory('$mmWsRequestSync', function($q, $log, $mmSite, $mmSitesManager, $mmSync, $mmWsRequestOffline, $mmApp) {
+.factory('$mmWsRequestSync', function($q, $log, $mmSite, $mmSync, $mmWsRequestOffline, $mmApp) {
     var self = $mmSync.createChild('mm.core', 300000);
     $log = $log.getInstance('$mmWsRequestSync');
 
     self.syncRequest = function(request){
-        console.log("Syncing request: "+JSON.stringify(request));
         return $mmSite.write(request.method, request.data, request.preSets);
     }
 
+    //function that is executed periodically to sync any queued requests
     self.syncRequests = function(){
         if (!$mmApp.isOnline()) {
             $log.debug('Cannot sync all requests because device is offline.');
             return $q.reject();
         }
-        console.log("Syncing requests");
-        var promise = $mmSitesManager.getSitesIds();
-        return promise.then(function(siteIds) {
-            console.log("Sites to sync: "+JSON.stringify(siteIds));
-            var sitePromises = [];
-            angular.forEach(siteIds, function(siteId) {
-                if($mmWsRequestOffline.hasSavedRequests(siteId)){
-                    console.log("Syncing requests for site "+siteId);
-                    sitePromises.push($mmWsRequestOffline.getRequests(siteId).then(function(requests) {
-                        console.log("Syncing requests: "+JSON.stringify(requests));
-                        angular.forEach(requests, function(request) {
-                            console.log("Syncing request: "+JSON.stringify(request));
-                            self.syncRequest(request).then(function(response) {
-                                console.log("Sync response: "+JSON.stringify(response));
-                                if(!!response.status){
-                                    $mmWsRequestOffline.deleteRequest(request.id).then(function(result){
-                                        console.log("Deleted request with ID "+requestId + " Result: "+JSON.stringify(result));
-                                    })
-                                } else {
-                                    console.log("Something went wrong syncing request. Response: "+JSON.stringify(response));
-                                }
-                            }, function(error){
-                                console.log("Error syncing request: "+JSON.stringify(error));
-                            });
-                        });
-
-                    }));
-                } else {
-                    console.log("Site has no requests to sync");
-                }
-            });
-            return $q.all(sitePromises);
-        });
+        console.log("Syncing queued requests");
+        var promises = [];
+        if($mmWsRequestOffline.hasSavedRequests()){
+            promises.push($mmWsRequestOffline.getRequests().then(function(requests) {
+                angular.forEach(requests, function(request) {
+                    console.log("Syncing request: "+JSON.stringify(request));
+                    self.syncRequest(request).then(function(response) {
+                        console.log("Sync response: "+JSON.stringify(response));
+                        if(!!response.status){
+                            $mmWsRequestOffline.deleteRequest(request.id).then(function(result){
+                                console.log("Deleted request with ID "+requestId);
+                            })
+                        } else {
+                            console.log("Something went wrong syncing queued request. Response: "+JSON.stringify(response));
+                        }
+                    }, function(error){
+                        console.log("Error syncing request queued: "+JSON.stringify(error));
+                    });
+                });
+            },function(error){
+                console.log("Cannot retrieve queued requests. Error: "+JSON.stringify(error));
+            }));
+        } else {
+            console.log("$mmApp has no queued requests to sync");
+        }
+        return $q.all(promises);
     }
 
+    //Sync handler used to schedule periodic sync by moodle app cron task
     self.syncHandler = function() {
 
         var handlerself = {};
@@ -76,7 +70,7 @@ angular.module('mm.core')
             return self.syncRequests();
         };
         handlerself.getInterval = function() {
-            return 300000; // 5 minutes.
+            return 600000; // 10 minutes.
         };
         handlerself.isSync = function() {
             return true;

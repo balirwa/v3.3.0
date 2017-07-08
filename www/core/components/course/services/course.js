@@ -633,20 +633,17 @@ angular.module('mm.core.course')
 
         if (!$mmApp.isOnline()) {
             //save request if offline
-            console.log("App offline. Queuing request: "+method);
             $log.debug('Cannot send request because device is offline. Storing request.');
-            return $mmWsRequestOffline.saveRequest($mmSite.getId(),method, params, preSets);
+            return $mmWsRequestOffline.saveRequest(method, params, preSets);
         }
-        console.log("App online. Not queuing request"+method);
 
         return $mmSite.write(method, params, preSets).then(function(response) {
             if (!response.status) {
                 return $q.reject();
             }
         },function(error){
-            console.log(JSON.stringify(error));
-            $log.debug('There was an error sending request. Storing request.');
-            return $mmWsRequestOffline.saveRequest($mmSite.getId(),method, params, preSets);
+            $log.debug('There was an error sending request. Queuing request.');
+            return $mmWsRequestOffline.saveRequest(method, params, preSets);
         });
     };
 

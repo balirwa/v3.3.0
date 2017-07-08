@@ -14,16 +14,16 @@
 
 angular.module('mm.core')
 
-.constant('mmWSRequestSynchronizationStore', 'ws_core_sync')
+.constant('mmWSRequestSynchronizationStore', 'mm_core_sync')
 
-.config(function($mmSitesFactoryProvider, mmWSRequestSynchronizationStore) {
+.config(function($mmAppProvider, mmWSRequestSynchronizationStore) {
     var stores = [
         {
             name: mmWSRequestSynchronizationStore,
             keyPath: 'id'
         }
     ];
-    $mmSitesFactoryProvider.registerStores(stores);
+    $mmAppProvider.registerStores(stores);
 })
 
 /**
@@ -33,48 +33,45 @@ angular.module('mm.core')
  * @ngdoc service
  * @name $mmWsRequestOffline
  */
-.factory('$mmWsRequestOffline', function($q, $log, $mmSitesManager) {
+.factory('$mmWsRequestOffline', function($q, $log, $mmApp, mmWSRequestSynchronizationStore) {
     var self = {};
     $log = $log.getInstance('$mmWsRequestOffline');
-    //delete Request
-    self.deleteRequest = function(requestId,  siteId) {
+
+    //Delete queued request from storage
+    //used to clear request after successful sync
+    self.deleteRequest = function(requestId) {
         console.log("Deleting request with ID "+requestId);
-        return $mmSitesManager.getSite(siteId).then(function(site) {
-            requestId = (requestId = parseInt(requestId, 10)) > 0 ? requestId : 0;
-            return site.getDb().remove(mmWSRequestSynchronizationStore, requestId);
-        });
+        return $mmApp.getDB().remove(mmWSRequestSynchronizationStore, requestId);
     };
 
-    self.saveRequest = function(siteId, method, data, preSets) {
-        console.log("Saving request");
-        return $mmSitesManager.getSite(siteId).then(function(site) {
-            var now = new Date().getTime(),
-                entry = {
- 		            id:now,
-                    method: method,
-                    data: data,
-                    preSets: preSets
-                };
-            console.log("Saving request: "+JSON.stringify(entry));
-            return site.getDb().insert(mmWSRequestSynchronizationStore, entry);
-        });
+    //save request being queued for sync later e.g when connectivity is available
+    //see SitesFactory#write for description of request parameters
+    self.saveRequest = function( method, data, preSets) {
+        var now = new Date().getTime(),
+            entry = {
+                id:now,
+                method: method,
+                data: data,
+                preSets: preSets
+            };
+        return $mmApp.getDB().insert(mmWSRequestSynchronizationStore, entry);
     };
 
-    self.getRequests = function(siteId) {
-        return $mmSitesManager.getSite(siteId).then(function(site) {
-            console.log("Retrieving all requests fir siteId: "+siteId);
-            return site.getDb().getAll(mmWSRequestSynchronizationStore);
-        });
+    //retrieve all stored requests
+    self.getRequests = function() {
+        return $mmApp.getDB().getAll(mmWSRequestSynchronizationStore);
     };
 
-    self.hasSavedRequests = function(siteId) {
-        return self.getRequests(siteId).then(function(requests) {
-            console.log("Site "+siteId+" has "+requests.length+" requests");
+    //convenient method to check whether there are any requests pending sync
+    self.hasSavedRequests = function() {
+        return self.getRequests().then(function(requests) {
+            console.log("app  has "+requests.length+" queued requests");
             return !!requests.length;
         }).catch(function() {
             // Error, return false.
+            console.log("Error  counting requests");
             return false;
         });
     };
-return self;
+    return self;
 });
