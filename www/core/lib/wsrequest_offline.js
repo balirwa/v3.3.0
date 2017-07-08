@@ -33,7 +33,7 @@ angular.module('mm.core')
  * @ngdoc service
  * @name $mmWsRequestOffline
  */
-.factory('$mmWsRequestOffline', function($q, $log, $mmSitesManager, $mmSite) {
+.factory('$mmWsRequestOffline', function($q, $log, $mmSitesManager) {
     var self = {};
     $log = $log.getInstance('$mmWsRequestOffline');
     //delete Request

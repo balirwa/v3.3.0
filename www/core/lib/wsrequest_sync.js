@@ -20,14 +20,14 @@ angular.module('mm.core')
  * @ngdoc service
  * @name $mmWsRequestSync
  */
-.factory('$mmWsRequestSync', function($q, $log, $mmSitesFactory, $mmSitesManager, $mmSite, $mmSync, $mmWsRequestOffline, $mmApp) {
+.factory('$mmWsRequestSync', function($q, $log, $mmSite, $mmSitesManager, $mmSync, $mmWsRequestOffline, $mmApp) {
     var self = $mmSync.createChild('mm.core', 300000);
     $log = $log.getInstance('$mmWsRequestSync');
 
     self.syncRequest = function(request){
         var retrying = true;
         console.log("Syncing request: "+JSON.stringify(request));
-        return $mmSitesFactory.request(request.method, request.data, request.preSets, retrying);
+        return $mmSite.request(request.method, request.data, request.preSets, retrying);
     }
 
     self.syncRequests = function(){
