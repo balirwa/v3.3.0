@@ -37,12 +37,17 @@ angular.module('mm.core')
         console.log("Syncing requests");
         var promise = $mmSitesManager.getSitesIds();
         return promise.then(function(siteIds) {
+            console.log("Sites to sync: "+JSON.stringify(siteIds));
             var sitePromises = [];
             angular.forEach(siteIds, function(siteId) {
                 if($mmWsRequestOffline.hasSavedRequests(siteId)){
+                    console.log("Syncing requests for site "+siteId);
                     sitePromises.push($mmWsRequestOffline.getRequests(siteId).then(function(requests) {
+                        console.log("Syncing requests: "+JSON.stringify(requests));
                         angular.forEach(requests, function(request) {
+                            console.log("Syncing request: "+JSON.stringify(request));
                             self.syncRequest(request).then(function(response) {
+                                console.log("Sync response: "+JSON.stringify(response));
                                 if(!!response.status){
                                     $mmWsRequestOffline.deleteRequest(request.id).then(function(result){
                                         console.log("Deleted request with ID "+requestId + " Result: "+JSON.stringify(result));
@@ -50,6 +55,8 @@ angular.module('mm.core')
                                 } else {
                                     console.log("Something went wrong syncing request. Response: "+JSON.stringify(response));
                                 }
+                            }, function(error){
+                                console.log("Error syncing request: "+JSON.stringify(error));
                             });
                         });
 

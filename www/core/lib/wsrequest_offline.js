@@ -62,12 +62,14 @@ angular.module('mm.core')
 
     self.getRequests = function(siteId) {
         return $mmSitesManager.getSite(siteId).then(function(site) {
+            console.log("Retrieving all requests fir siteId: "+siteId);
             return site.getDb().getAll(mmWSRequestSynchronizationStore);
         });
     };
 
     self.hasSavedRequests = function(siteId) {
         return self.getRequests(siteId).then(function(requests) {
+            console.log("Site "+siteId+" has "+requests.length+" requests");
             return !!requests.length;
         }).catch(function() {
             // Error, return false.
