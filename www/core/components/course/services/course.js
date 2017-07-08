@@ -619,8 +619,8 @@ angular.module('mm.core.course')
      */
     self.logView = function(courseId, section) {
         var params = {
-            courseid: courseId,
-            deviceid:window.device.uuid
+            courseid: courseId
+            //deviceid:window.device.uuid
         };
         if (typeof section != 'undefined') {
             params.sectionnumber = section;
