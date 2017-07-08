@@ -11640,22 +11640,6 @@ mm-format-text[max-height], *[mm-format-text][max-height] {
   outline: none;
   z-index: 100; }
 
-.item.item-button-right .badge.mm-course-download, .mm-grades-table .item-button-right.itemcenter .badge.mm-course-download, .item.item-button-right .mma-messages-date span.mm-course-download, .mma-messages-date .item.item-button-right span.mm-course-download, .mm-grades-table .item-button-right.itemcenter .mma-messages-date span.mm-course-download, .mma-messages-date .mm-grades-table .item-button-right.itemcenter span.mm-course-download, .item.item-button-right
-.mma-messages-unreadfrom span.mm-course-download,
-.mma-messages-unreadfrom .item.item-button-right span.mm-course-download, .mm-grades-table .item-button-right.itemcenter
-.mma-messages-unreadfrom span.mm-course-download,
-.mma-messages-unreadfrom .mm-grades-table .item-button-right.itemcenter span.mm-course-download, .item.item-button-right .mma-chat-notice span.mm-course-download, .mma-chat-notice .item.item-button-right span.mm-course-download, .mm-grades-table .item-button-right.itemcenter .mma-chat-notice span.mm-course-download, .mma-chat-notice .mm-grades-table .item-button-right.itemcenter span.mm-course-download {
-  right: 44px; }
-
-.mm-course-module-handler mm-format-text + mm-format-text {
-  margin-top: 16px; }
-
-mm-course-mod-description .card .item, mm-course-mod-description .card .mm-grades-table .itemcenter, .mm-grades-table mm-course-mod-description .card .itemcenter {
-  padding: 8px; }
-
-.padding mm-course-mod-description .card, .item .item-heading.padding mm-course-mod-description .card, .mm-grades-table .itemcenter .item-heading.padding mm-course-mod-description .card {
-  margin-top: 0; }
-
 .mm-question-textarea {
   width: 100%;
   height: 250px;
@@ -11777,6 +11761,22 @@ li.mm-question-answer-incorrect,
 .mm-question-warning, p.mm-question-warning, .item .mm-question-warning, .mm-grades-table .itemcenter .mm-question-warning {
   color: #c00; }
 
+.item.item-button-right .badge.mm-course-download, .mm-grades-table .item-button-right.itemcenter .badge.mm-course-download, .item.item-button-right .mma-messages-date span.mm-course-download, .mma-messages-date .item.item-button-right span.mm-course-download, .mm-grades-table .item-button-right.itemcenter .mma-messages-date span.mm-course-download, .mma-messages-date .mm-grades-table .item-button-right.itemcenter span.mm-course-download, .item.item-button-right
+.mma-messages-unreadfrom span.mm-course-download,
+.mma-messages-unreadfrom .item.item-button-right span.mm-course-download, .mm-grades-table .item-button-right.itemcenter
+.mma-messages-unreadfrom span.mm-course-download,
+.mma-messages-unreadfrom .mm-grades-table .item-button-right.itemcenter span.mm-course-download, .item.item-button-right .mma-chat-notice span.mm-course-download, .mma-chat-notice .item.item-button-right span.mm-course-download, .mm-grades-table .item-button-right.itemcenter .mma-chat-notice span.mm-course-download, .mma-chat-notice .mm-grades-table .item-button-right.itemcenter span.mm-course-download {
+  right: 44px; }
+
+.mm-course-module-handler mm-format-text + mm-format-text {
+  margin-top: 16px; }
+
+mm-course-mod-description .card .item, mm-course-mod-description .card .mm-grades-table .itemcenter, .mm-grades-table mm-course-mod-description .card .itemcenter {
+  padding: 8px; }
+
+.padding mm-course-mod-description .card, .item .item-heading.padding mm-course-mod-description .card, .mm-grades-table .itemcenter .item-heading.padding mm-course-mod-description .card {
+  margin-top: 0; }
+
 #mm-settings-languagelabel {
   color: #000; }
 
@@ -11788,6 +11788,26 @@ li.mm-question-answer-incorrect,
 
 .mm-site_mm_user-profile .mm-tab-handlers {
   padding-bottom: 16px; }
+
+.mm-mm_login_sites .item-thumbnail-left .item-content {
+  padding-top: 16px;
+  padding-right: 16px; }
+
+.mm-mm_login_sites .list-left-editing .item-thumbnail-left .item-content {
+  padding-right: 49px; }
+
+.mm-mm_login_sites .avatar {
+  margin: 0;
+  width: 80px;
+  height: 80px;
+  max-width: 80px;
+  max-height: 80px;
+  border-radius: 50%;
+  padding: 4px;
+  border: 1px solid #ddd; }
+
+.mm-login-sitepolicy-iframe {
+  height: 300px; }
 
 .bar-side-menu {
   border-color: transparent;
@@ -11897,26 +11917,6 @@ li.mm-question-answer-incorrect,
     border-right: 1px solid #ddd;
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd; }
-
-.mm-mm_login_sites .item-thumbnail-left .item-content {
-  padding-top: 16px;
-  padding-right: 16px; }
-
-.mm-mm_login_sites .list-left-editing .item-thumbnail-left .item-content {
-  padding-right: 49px; }
-
-.mm-mm_login_sites .avatar {
-  margin: 0;
-  width: 80px;
-  height: 80px;
-  max-width: 80px;
-  max-height: 80px;
-  border-radius: 50%;
-  padding: 4px;
-  border: 1px solid #ddd; }
-
-.mm-login-sitepolicy-iframe {
-  height: 300px; }
 
 .mma-messages-date,
 .mma-messages-unreadfrom {
@@ -12179,62 +12179,6 @@ li.mm-question-answer-incorrect,
   z-index: 3;
   box-shadow: 3px 3px 4px #000; }
 
-.mma-qtype-gapselect-container p {
-  margin: 0 0 .5em; }
-
-.mma-qtype-gapselect-container select {
-  height: 30px;
-  line-height: 30px;
-  display: inline-block;
-  border: 1px solid #ccc;
-  padding: 4px 6px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  margin-bottom: 10px; }
-
-.mma-qtype-match-container .item-select select,
-.mma-qtype-match-container .item-select .mm-select-fix {
-  padding: 0 36px 0 0;
-  max-width: 100%;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column; }
-
-.mma-qtype-multianswer-container p {
-  margin: 0 0 .5em; }
-
-.mma-qtype-multianswer-container .answer div.r0, .mma-qtype-multianswer-container .answer div.r1 {
-  padding: 0.3em; }
-
-.mma-qtype-multianswer-container table {
-  width: 100%;
-  display: table; }
-
-.mma-qtype-multianswer-container tr {
-  display: table-row; }
-
-.mma-qtype-multianswer-container td {
-  display: table-cell; }
-
-.mma-qtype-multianswer-container input, .mma-qtype-multianswer-container select {
-  display: inline-block;
-  border: 1px solid #ccc;
-  padding: 4px 6px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  margin-bottom: 10px; }
-
-.mma-qtype-multianswer-container select {
-  height: 30px;
-  line-height: 30px; }
-
-.mma-qtype-multianswer-container input[type="radio"], .mma-qtype-multianswer-container input[type="checkbox"] {
-  margin-top: -4px;
-  margin-right: 7px; }
-
 .mma-qtype-ddwtos-container .qtext {
   margin-bottom: 0.5em;
   display: block; }
@@ -12326,6 +12270,62 @@ li.mm-question-answer-incorrect,
 
 .mma-qtype-ddwtos-container sub {
   bottom: -0.2em; }
+
+.mma-qtype-gapselect-container p {
+  margin: 0 0 .5em; }
+
+.mma-qtype-gapselect-container select {
+  height: 30px;
+  line-height: 30px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 4px 6px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  margin-bottom: 10px; }
+
+.mma-qtype-match-container .item-select select,
+.mma-qtype-match-container .item-select .mm-select-fix {
+  padding: 0 36px 0 0;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column; }
+
+.mma-qtype-multianswer-container p {
+  margin: 0 0 .5em; }
+
+.mma-qtype-multianswer-container .answer div.r0, .mma-qtype-multianswer-container .answer div.r1 {
+  padding: 0.3em; }
+
+.mma-qtype-multianswer-container table {
+  width: 100%;
+  display: table; }
+
+.mma-qtype-multianswer-container tr {
+  display: table-row; }
+
+.mma-qtype-multianswer-container td {
+  display: table-cell; }
+
+.mma-qtype-multianswer-container input, .mma-qtype-multianswer-container select {
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 4px 6px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  margin-bottom: 10px; }
+
+.mma-qtype-multianswer-container select {
+  height: 30px;
+  line-height: 30px; }
+
+.mma-qtype-multianswer-container input[type="radio"], .mma-qtype-multianswer-container input[type="checkbox"] {
+  margin-top: -4px;
+  margin-right: 7px; }
 
 .mm-site_mod_assign div.latesubmission,
 .mm-site_mod_assign-submission div.latesubmission {

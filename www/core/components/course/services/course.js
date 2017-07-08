@@ -33,7 +33,7 @@ angular.module('mm.core.course')
  * @ngdoc service
  * @name $mmCourse
  */
-.factory('$mmCourse', function($mmSite, $translate, $q, $log, $mmEvents, $mmSitesManager, mmCoreEventCompletionModuleViewed) {
+.factory('$mmCourse', function($mmSite, $translate, $q, $log, $mmEvents, $mmSitesManager, mmCoreEventCompletionModuleViewed,$mmWsRequestOffline) {
 
     $log = $log.getInstance('$mmCourse');
 
@@ -620,19 +620,33 @@ angular.module('mm.core.course')
     self.logView = function(courseId, section) {
         var params = {
             courseid: courseId,
-            deviceId:window.device.uuid
+            deviceid:window.device.uuid
         };
         if (typeof section != 'undefined') {
             params.sectionnumber = section;
         }
 
-        return $mmSite.write('core_course_view_course', params).then(function(response) {
-        console.log(JSON.stringify(response));
+        var preSets = {};
+        preSets.sync = 0;
+        var method = 'core_course_view_course'
+
+
+        if (!$mmApp.isOnline()) {
+            //save request if offline
+            console.log("App offline. Queuing request: "+method);
+            $log.debug('Cannot send request because device is offline. Storing request.');
+            return $mmWsRequestOffline.saveRequest($mmSite.getId(),method, params, preSets);
+        }
+        console.log("App online. Not queuing request"+method);
+
+        return $mmSite.write(method, params, preSets).then(function(response) {
             if (!response.status) {
                 return $q.reject();
             }
         },function(error){
-        console.log(JSON.stringify(error));
+            console.log(JSON.stringify(error));
+            $log.debug('There was an error sending request. Storing request.');
+            return $mmWsRequestOffline.saveRequest($mmSite.getId(),method, params, preSets);
         });
     };
 
