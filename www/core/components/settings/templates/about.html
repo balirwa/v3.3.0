@@ -2,23 +2,25 @@
     <ion-content mm-state-class>
         <ul class="list">
             <li class="item">
-                <h2>{{appname}} {{versionname}}</h2>
+                <h2 style="color:blue;font-weight: bold;"> mobileProtocols 3.3.0 (Powered by Moodle Mobile)</h2>
+                <p> mobileProtocols is a mobile app for healthcare workers. </p>
+                <p>It is aimed at providing easier access to healthcare protocols in order to promote delivery of quality care</p>
             </li>
+
+
+
             <li class="item item-divider">
-                <p>{{ 'mm.settings.license' | translate }}</p>
+                <p style="font-weight: bold;">Contact Us</p>
             </li>
             <li class="item item-text-wrap">
-                <h2>Apache 2.0</h2>
-                <p><a href="http://www.apache.org/licenses/LICENSE-2.0" mm-link auto-login="no">http://www.apache.org/licenses/LICENSE-2.0</a></p>
+                <p>Incase of any questions about this app or its content, contact the following:
+                <ol><li>Balirwa Priscillah:+254 790163357, balirwapriscy@gmail.com</li>
+                    <li>Dr. Thomas Mwogi:+254 722256327 </li>
+                </ol></p>
             </li>
-            <li class="item item-divider" ng-if="privacyPolicy">
-                <p>{{ 'mm.settings.privacypolicy' | translate }}</p>
-            </li>
-            <li class="item item-text-wrap" ng-if="privacyPolicy">
-                <p><a ng-href="{{ privacyPolicy }}" mm-link auto-login="no">{{ privacyPolicy }}</a></p>
-            </li>
+
             <li class="item item-divider">
-                <p>{{ 'mm.settings.deviceinfo' | translate }}</p>
+                <pstyle="font-weight: bold;">{{ 'mm.settings.deviceinfo' | translate }}</p>
             </li>
             <li class="item item-text-wrap" ng-if="versionname">
                 <p class="item-heading">{{ 'mm.settings.versionname' | translate}}</p>

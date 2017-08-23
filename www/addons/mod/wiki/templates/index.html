@@ -15,13 +15,9 @@
         </mm-context-menu>
     </ion-nav-buttons>
     <ion-tabs class="tabs-icon-top" delegate-handle="{{tabsDelegateName}}">
-        <ion-tab title="{{ 'mma.mod_wiki.viewpage' | translate }}" icon="ion-document">
+        <ion-tab>
             <ng-include src="'addons/mod/wiki/templates/page.html'"></ng-include>
         </ion-tab>
-        <ion-tab title="{{ 'mma.mod_wiki.map' | translate }}" icon="ion-map">
-            <ion-pane ng-controller="mmaModWikiMapCtrl">
-                <ng-include src="'addons/mod/wiki/templates/map.html'"></ng-include>
-            </ion-pane>
-        </ion-tab>
+
     </ion-tabs>
 </ion-view>
