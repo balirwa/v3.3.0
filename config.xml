@@ -2,11 +2,12 @@
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="net.moodle.learn" versionCode="3" version="1.2">
   <name>mobileProtocols</name>
   <description>
-       A mobile application for healthcare worker
+       A mobile application for healthcare workers
     </description>
   <author href="http://mu.ac.ke" email="mprotocols@gmail.com">
     Moi University: Institute of BioMedical Informatics
     </author>
+  <content src="index.html"/>
   <gap:config-file platform="ios" parent="CFBundleShortVersionString">
     <string>1.2</string>
   </gap:config-file>
