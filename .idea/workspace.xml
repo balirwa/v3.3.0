@@ -2,9 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd31b648-aadb-4d52-9310-250b0c5b8897" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/addons/myoverview/controllers/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/addons/myoverview/directives/eventlist.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/addons/myoverview/img/activities.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/addons/myoverview/img/courses.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/addons/myoverview/lang/ar.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/addons/myoverview/lang/bg.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/addons/myoverview/lang/ca.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/addons/myoverview/lang/cs.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/addons/myoverview/lang/da.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/addons/myoverview/lang/de.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/addons/myoverview/lang/el.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/addons/myoverview/lang/en.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/addons/myoverview/lang/es-mx.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/addons/myoverview/lang/es.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/addons/myoverview/lang/eu.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/addons/myoverview/lang/fa.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/addons/myoverview/lang/fr.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/addons/myoverview/lang/he.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/addons/myoverview/lang/hu.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/addons/myoverview/lang/it.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/addons/myoverview/lang/ja.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/addons/myoverview/lang/lt.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/addons/myoverview/lang/nl.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/addons/myoverview/lang/pl.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/addons/myoverview/lang/pt-br.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/addons/myoverview/lang/pt.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/addons/myoverview/lang/ro.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/addons/myoverview/lang/ru.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/addons/myoverview/lang/sv.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/addons/myoverview/lang/tr.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/addons/myoverview/lang/zh-cn.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/addons/myoverview/lang/zh-tw.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/addons/myoverview/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/addons/myoverview/scss/styles.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/addons/myoverview/services/handlers.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/addons/myoverview/services/myoverview.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/addons/myoverview/templates/eventlist.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/addons/myoverview/templates/index.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/core/lib/log.js" afterPath="$PROJECT_DIR$/www/core/lib/log.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
     </list>
     <ignored path="v3.3.0.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,7 +100,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="405">
@@ -84,11 +120,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="courselistprogress.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="courselistprogress.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/core/components/courses/templates/courselistprogress.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+            <state relative-caret-position="-184">
+              <caret line="0" column="3" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -151,8 +187,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="104" />
-    <option name="y" value="23" />
+    <option name="x" value="105" />
+    <option name="y" value="25" />
     <option name="width" value="1148" />
     <option name="height" value="728" />
   </component>
@@ -182,33 +218,31 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="v3.3.0" />
+              <option name="myItemId" value="v3.3.0 copy" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="v3.3.0" />
+              <option name="myItemId" value="v3.3.0 copy" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="v3.3.0" />
+              <option name="myItemId" value="v3.3.0 copy" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="v3.3.0" />
+              <option name="myItemId" value="v3.3.0 copy" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="v3.3.0" />
+              <option name="myItemId" value="v3.3.0 copy" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -218,11 +252,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="v3.3.0" />
+              <option name="myItemId" value="v3.3.0 copy" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="v3.3.0" />
+              <option name="myItemId" value="v3.3.0 copy" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -234,8 +268,88 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="v3.3.0 copy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="v3.3.0 copy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="v3.3.0 copy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="v3.3.0 copy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="courses" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="v3.3.0 copy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="v3.3.0 copy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="courses" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -509,7 +623,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="104" y="23" width="1148" height="728" extended-state="1" />
+    <frame x="105" y="25" width="1148" height="728" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -523,7 +637,7 @@
       <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31132075" sideWeight="0.49638337" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19710669" sideWeight="0.49109414" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2585895" sideWeight="0.49109414" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -870,14 +984,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/core/components/courses/templates/courselistprogress.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/core/components/settings/templates/about.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -890,6 +996,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
           <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/core/components/courses/templates/courselistprogress.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-184">
+          <caret line="0" column="3" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
           <folding />
         </state>
       </provider>
