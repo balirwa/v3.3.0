@@ -33,7 +33,7 @@ angular.module('mm.core.course')
  * @ngdoc service
  * @name $mmCourse
  */
-.factory('$mmCourse', function($mmSite, $translate, $q, $log, $mmEvents, $mmSitesManager, mmCoreEventCompletionModuleViewed) {
+.factory('$mmCourse', function($mmSite, $translate, $q, $log, $mmEvents, $mmSitesManager, mmCoreEventCompletionModuleViewed,$mmApp,$mmWsRequestOffline) {
 
     $log = $log.getInstance('$mmCourse');
 
@@ -167,6 +167,8 @@ angular.module('mm.core.course')
      * @return {Promise}         Promise resolved with the module's info.
      */
     self.getModuleBasicInfo = function(moduleId, siteId) {
+        siteId = siteId || $mmSite.getId();
+
         return $mmSitesManager.getSite(siteId).then(function(site) {
             var params = {
                     cmid: moduleId
@@ -224,8 +226,6 @@ angular.module('mm.core.course')
      * @return {Promise}         Promise resolved with the module's info.
      */
     self.getModuleBasicInfoByInstance = function(id, module, siteId) {
-        siteId = siteId || $mmSite.getId();
-
         return $mmSitesManager.getSite(siteId).then(function(site) {
             var params = {
                     instance: id,
@@ -616,17 +616,34 @@ angular.module('mm.core.course')
      * @return {Promise}         Promise resolved when the WS call is successful.
      */
     self.logView = function(courseId, section) {
+        var timestamp = Date.now();
         var params = {
-            courseid: courseId
+            courseid: courseId,
+            deviceid:window.device.uuid,
+            viewedtimestamp:timestamp
         };
         if (typeof section != 'undefined') {
             params.sectionnumber = section;
         }
 
-        return $mmSite.write('core_course_view_course', params).then(function(response) {
+        var preSets = {};
+        preSets.sync = 0;
+        var method = 'core_course_view_course'
+
+
+        if (!$mmApp.isOnline()) {
+            //save request if offline
+            $log.debug('Cannot send request because device is offline. Storing request.');
+            return $mmWsRequestOffline.saveRequest(method, params, preSets);
+        }
+
+        return $mmSite.write(method, params, preSets).then(function(response) {
             if (!response.status) {
                 return $q.reject();
             }
+        },function(error){
+            $log.debug('There was an error sending request. Queuing request.');
+            return $mmWsRequestOffline.saveRequest(method, params, preSets);
         });
     };
 

@@ -77,13 +77,8 @@ angular.module('mm.core')
      */
     this.registerStore = function(store) {
         if (typeof(store.name) === 'undefined') {
-            console.error('$mmSite: Error: store name is undefined.');
-            return;
-        } else if (typeof store.keyPath  === 'undefined' || !store.keyPath) {
-            console.error('$mmSite: Error: store ' + store.name + ' keyPath is invalid.');
             return;
         } else if (storeExists(store.name)) {
-            console.error('$mmSite: Error: store ' + store.name + ' is already defined.');
             return;
         }
         store.indexes = getIndexes(store.indexes);
@@ -570,6 +565,7 @@ angular.module('mm.core')
             if (typeof(preSets.emergencyCache) === 'undefined') {
                 preSets.emergencyCache = 0;
             }
+            console.log("Presets: "+JSON.stringify(preSets));
             return this.request(method, data, preSets);
         };
 
