@@ -16,9 +16,7 @@
                 <i class="icon ion-ionic"></i>
             </div>
         </div>
-        <h2><mm-format-text watch="true">{{course.fullname}}</mm-format-text></h2>
-        <mm-progress-bar ng-if="!roundProgress && course.progress !== false" progress="course.progress"></mm-progress-bar>
-
+        <button class="button button-block button-positive"><mm-format-text watch="true">{{course.fullname}}</mm-format-text></button>
         <ion-spinner ng-if="!loaded" class="mm-animate-show-hide"></ion-spinner>
     </a>
     <div class="item item-text-wrap item-borderless" ng-show="course.summary" ng-if="showSummary">
