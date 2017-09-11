@@ -13,7 +13,7 @@
                 <ul class="list">
                     <li ng-repeat="section in sections" ng-if="sectionHasContent(section)" ng-class="{'item-dimmed': section.visible === 0 || section.uservisible === false}">
                         <a class="item item-text-wrap" mm-split-view-link="site.mm_course-section({cid: courseId, sectionid: section.id, mid: moduleId})" title="{{section.name}}" ng-class="{'item-button-right': downloadSectionsEnabled}">
-                            <mm-format-text watch="true">{{section.name}}</mm-format-text>
+                            <button class="button button-block button-positive"><mm-format-text watch="true">{{section.name}}</mm-format-text></button>
 
                             <button ng-if="downloadSectionsEnabled && section.showDownload && !section.isDownloading && !section.isCalculating" ng-click="prefetch($event, section)" class="button button-icon" aria-label="{{ 'mm.core.download' | translate }}">
                                 <i class="icon ion-ios-cloud-download-outline"></i>
