@@ -9,13 +9,7 @@
                 <div class="item item-text-wrap"><p>{{ 'mma.files.myprivatefilesdesc' | translate }}</p></div>
             </section>
 
-            <section class="list card" ng-if="showSiteFiles">
-                <a ui-sref="site.files-list({root: 'site'})" class="item item-icon-right" title="{{ 'mma.files.sitefiles' | translate }}">
-                    <i class="icon ion-ios-arrow-right"></i>
-                    {{ 'mma.files.sitefiles' | translate }}
-                </a>
-                <div class="item item-text-wrap"><p>{{ 'mma.files.sitefilesdesc' | translate }}</p></div>
-            </section>
+
 
             <div class="list card" ng-if="!canDownload">
                 <div class="item item-text-wrap"><p>{{ 'mma.files.admindisableddownload' | translate }}</p></div>
